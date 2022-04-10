@@ -12,3 +12,9 @@ This program simulates a toss of a fair coin (50% chance for heads and tail equa
 
 
 P.S. https://en.wikipedia.org/wiki/Law_of_large_numbers
+
+## To use the program
+1. Pull the repo
+2. Open command line in root directory
+3. Run "pip install -r requirements.txt"
+4. Enjoy!
