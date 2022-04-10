@@ -7,12 +7,15 @@ During my studies of probability I came across an interesting thing - the law of
 This program simulates a toss of a fair coin (50% chance for heads and tail equally) and displays results on a dynamic plot.
 ### Results:
 ![image](https://user-images.githubusercontent.com/62321153/162632265-96612b22-5909-4f09-9d99-f9ff1629315c.png)
+
 ### After a few tosses:
 ![image](https://user-images.githubusercontent.com/62321153/162632367-07c0740a-6da1-4fa4-af75-aa1ae20c054a.png)
 
 
-P.S. https://en.wikipedia.org/wiki/Law_of_large_numbers
+_Note: The project will create a directory with photos when you try to save them_
 
+
+P.S. https://en.wikipedia.org/wiki/Law_of_large_numbers
 ## To use the program
 1. Pull the repo
 2. Open command line in root directory
