@@ -10,13 +10,17 @@ import os
 
 try:
     import tkinter as tk
+    from tkinter import messagebox
 except ImportError:
     import Tkinter as tk
+    from Tkinter import messagebox
 
 try:
     from tkinter import ttk
 except ImportError:
     import ttk
+
+
 
 matplotlib.style.use('ggplot')
 
@@ -133,7 +137,7 @@ class GUI(App):
         self.help_line_is_shown = tk.BooleanVar()
         self.help_line_is_shown.set(False)
         show_avg_line = ttk.Checkbutton(probability_div,
-                                        text='Show line',
+                                        text='Show approximation line',
                                         style='main.TCheckbutton',
                                         variable=self.help_line_is_shown,
                                         command=self.show_line)
@@ -247,9 +251,12 @@ class GUI(App):
         file_end_number = GUI.generate_file_number()
         if os.path.exists(os.path.join(os.getcwd(),'BigNum__plots')):
             self.fig.savefig(f'BigNum__plots/bigNumPlot_{file_end_number}.jpg')
+            messagebox.showinfo(title='Save status', message='File sucessfully saved!')
+
         else:
             os.mkdir('BigNum__plots')
             self.fig.savefig(f'BigNum__plots/bigNumPlot_{file_end_number}.jpg')
+            messagebox.showinfo(title='Save status', message='Created directory in project root and saved file!')
 
     def __initilize_animation(self):
         """
@@ -298,7 +305,7 @@ class GUI(App):
                 2 - Probability Scaler
         """
         if scaler_number==1:
-            value_list = [1,2,5,10,15,25,50,100,200] # compare values of probability_scaler and adjust
+            value_list = [1,2,5,10,15,25,50,100,150,200] # compare values of probability_scaler and adjust
             value, upper_bound = self.__set_scaler(value, value_list)
             if upper_bound==0:
                 self.tosses_value.set(value_list[0])
